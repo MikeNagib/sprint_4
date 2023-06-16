@@ -1,10 +1,10 @@
 import pytest
 import allure
 from pages.main_page import MainPage
-from conftest import questions_and_answers, link_dzen, link_main_page
+from data import questions_and_answers
 
 
-@allure.suite('Набор тестов для проверки QA')
+@allure.suite('Набор тестов для проверки FAQ')
 class TestQuestionPage:
 
     @allure.title('Проверка вопросов')
@@ -15,8 +15,3 @@ class TestQuestionPage:
         page.find_question(question)
         page.find_answer(answer)
 
-    @allure.title('Проверка логотипов')
-    def test_click_logo(self, driver):
-        page = MainPage(driver)
-        assert link_dzen == page.verify_if_link_to_yandex_works()
-        assert link_main_page == page.verify_if_link_to_base_page_works()

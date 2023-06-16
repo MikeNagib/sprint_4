@@ -1,9 +1,10 @@
 import allure
 from locators.order_page_locators import OrderPageLocators
-from pages.main_page import MainPage
+
+from pages.base_page import BasePage
 
 
-class OrderPage(MainPage):
+class OrderPage(BasePage):
     @allure.step('Нажать кнопку для заказа')
     def click_order_button(self, by_button):
         self.click(by_button)
@@ -40,3 +41,4 @@ class OrderPage(MainPage):
     @allure.step('Всплывающее окно с сообщением об успешном создании заказа.')
     def verify_if_order_is_created(self):
         return self.find_text(OrderPageLocators.modal_window_with_oder_number)
+

@@ -1,7 +1,8 @@
 import pytest
 import allure
 from pages.order_page import OrderPage
-from conftest import orders, TEXT_ORDER_IS_DONE
+from pages.main_page import MainPage
+from data import orders, TEXT_ORDER_IS_DONE
 
 
 @allure.suite('Тесты для заказа')
@@ -12,7 +13,8 @@ class TestCreateOrder:
     def test_order_from_header_success(self, driver, order):
 
         page = OrderPage(driver)
-        page.accept_cookies()
+        page2 = MainPage(driver)
+        page2.accept_cookies()
         page.click_order_button(order['by_button'])
         page.fill_customer_data(
             order['firstname'],
