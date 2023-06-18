@@ -34,4 +34,3 @@ class TestCreateOrder:
         page.click_button_confirm()
         page.verify_if_order_is_created()
         assert TEXT_ORDER_IS_DONE in page.verify_if_order_is_created()
-
