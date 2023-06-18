@@ -5,6 +5,8 @@ from locators.main_page_locators import MainPageLocators
 
 link_main_page = 'https://qa-scooter.praktikum-services.ru/'
 link_dzen = "https://dzen.ru/?yredirect=true"
+link_order = 'https://qa-scooter.praktikum-services.ru/order'
+
 
 TIME_TO_WAIT_ELEMENTS = 15
 TEXT_ORDER_IS_DONE = "Заказ оформлен"
