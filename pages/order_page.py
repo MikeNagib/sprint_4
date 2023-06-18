@@ -41,4 +41,3 @@ class OrderPage(BasePage):
     @allure.step('Всплывающее окно с сообщением об успешном создании заказа.')
     def verify_if_order_is_created(self):
         return self.find_text(OrderPageLocators.modal_window_with_oder_number)
-
