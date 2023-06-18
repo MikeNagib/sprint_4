@@ -13,5 +13,4 @@ class TestQuestionPage:
         page = MainPage(driver)
         page.accept_cookies()
         page.find_question(question)
-        page.find_answer(answer)
-
+        page.check_answer(answer)
