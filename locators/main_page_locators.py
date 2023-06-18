@@ -8,4 +8,3 @@ class MainPageLocators:
     logo_scooter = [By.XPATH, './/img[@alt="Scooter"]']
     button_header_order = (By.XPATH, "(//button[text()='Заказать'])[1]")
     button_middle_order = (By.XPATH, "(//button[text()='Заказать'])[2]")
-    STATUS_BUTTON = [By.XPATH, '(.//button[text()=\'Статус заказа\'])']
