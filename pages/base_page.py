@@ -9,7 +9,6 @@ class BasePage:
 
     def __init__(self, driver):
         self.driver = driver
-        self.driver.get(link_main_page)
 
     def click(self, by_locator):
         WebDriverWait(self.driver, TIME_TO_WAIT_ELEMENTS).until(expected_conditions.
