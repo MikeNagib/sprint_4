@@ -29,6 +29,8 @@ class BasePage:
             expected_conditions.visibility_of_element_located(by_locator))
         return self.driver.find_element(*by_locator).text
 
+    def scrolling(self, question_locator):
+        self.driver.execute_script("arguments[0].scrollIntoView();", self.driver.find_element(*question_locator))
 
 
 
