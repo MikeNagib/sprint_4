@@ -31,7 +31,7 @@ class MainPage(BasePage):
 
     @allure.step('Найти вопрос')
     def find_question(self, question_locator):
-        self.driver.execute_script("arguments[0].scrollIntoView();", self.driver.find_element(*question_locator))
+        self.scrolling(question_locator)
         WebDriverWait(self.driver, TIME_TO_WAIT_ELEMENTS).until(
             expected_conditions.element_to_be_clickable(question_locator))
         self.driver.find_element(*question_locator).click()
